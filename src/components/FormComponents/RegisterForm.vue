@@ -1,6 +1,6 @@
 <template>
     <v-form>
-      <v-card width="400px">
+      <v-card width="600px">
         <v-card-title class="headline">新規登録</v-card-title>
   
         <v-card-text>

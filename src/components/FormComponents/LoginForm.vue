@@ -1,6 +1,6 @@
 <template>
   <v-form>
-    <v-card width="400px">
+    <v-card width="600px">
       <!-- タイトル -->
       <v-card-title class="headline">ログイン</v-card-title>
  

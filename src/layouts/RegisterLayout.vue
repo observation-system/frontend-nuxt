@@ -18,6 +18,6 @@ LoginLayout.vueJavaScript
   top: 0;
   left: 0;
   background-size: cover;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(228, 228, 228);
 }
 </style>
