@@ -2,15 +2,14 @@
     <v-form>
       <v-card width="600px">
         <v-card-title class="headline">新規登録</v-card-title>
-  
         <v-card-text>
           <NameField :name.sync="name" />
           <EmailField :email.sync="email" />
           <PasswordField :password.sync="password" />
         </v-card-text>
-  
-        <v-card-actions>
+        <v-card-actions class="justify-end">
           <v-btn color="#00ced1" @click="register">登録</v-btn>
+          <v-btn color="#d3d3d3" @click="changePage">ログインはこちら</v-btn>
         </v-card-actions>
       </v-card>
     </v-form>
@@ -46,7 +45,10 @@ export default {
             } catch (error) {
                 console.log(error);
             }
+        },
+        changePage() {
+            this.$router.push("/auth/login");
         }
-    },
+    }
 };
 </script>

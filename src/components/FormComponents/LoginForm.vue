@@ -11,8 +11,9 @@
       </v-card-text>
  
       <!-- アクションボタン -->
-      <v-card-actions>
+      <v-card-actions class="justify-end">
         <v-btn color="#00ced1" @click="login">ログイン</v-btn>
+        <v-btn color="#d3d3d3" @click="changePage">新規登録はこちら</v-btn>
       </v-card-actions>
     </v-card>
   </v-form>
@@ -47,7 +48,10 @@ export default {
             } catch (error) {
                 console.log(error);
             }
+        },
+        changePage() {
+            this.$router.push("/auth/register");
         }
-    },
+    }
 };
 </script>
