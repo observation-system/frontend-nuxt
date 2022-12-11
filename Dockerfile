@@ -1,8 +1,3 @@
-FROM node:lts-alpine
+FROM node:16
 
 RUN mkdir src
-
-RUN apk update && \
-    apk upgrade && \
-    apk add git && \
-    npm install -g npm@latest nuxi nuxt3
