@@ -38,7 +38,29 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+  auth: {
+    redirect: {
+        login: '/auth/login',
+    },
+    strategies: {
+        laravelApi: {
+            provider: 'laravel/sanctum',
+            url: process.env.MAIN_URL,
+            endpoints: {   
+              login: { url: '/api/login', method: 'post' },
+              logout: { url: '/api/logout', method: 'post' },
+              user: { url: '/api/user', method: 'get' }
+            }
+        },
+    }
+},
+axios: {
+  baseURL: process.env.MAIN_URL,
+  credentials: true
+},
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
