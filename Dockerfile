@@ -1,5 +1,8 @@
-FROM node:18.1-alpine
+FROM node:lts-alpine
 
-WORKDIR /src
-RUN yarn global add @vue/cli
-EXPOSE 3000
+RUN mkdir src
+
+RUN apk update && \
+    apk upgrade && \
+    apk add git && \
+    npm install -g npm@latest nuxi nuxt3
